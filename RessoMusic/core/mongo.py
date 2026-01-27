@@ -4,11 +4,11 @@ from config import MONGO_DB_URI
 
 from ..logging import LOGGER
 
-LOGGER(__name__).info("» ᴄᴏɴɴᴇᴄᴛɪɴɢ ᴛᴏ ʏᴏᴜʀ ᴍᴏɴɢᴏ ᴅᴀᴛᴀʙᴀsᴇ...")
+LOGGER(name).info("Connecting to your Mongo Database...")
 try:
     _mongo_async_ = AsyncIOMotorClient(MONGO_DB_URI)
-    mongodb = _mongo_async_.Anon
-    LOGGER(__name__).info("» ᴄᴏɴɴᴇᴄᴛᴇᴅ ᴛᴏ ʏᴏᴜʀ ᴍᴏɴɢᴏ ᴅᴀᴛᴀʙᴀsᴇ.")
+    mongodb = _mongo_async_.Yukki
+    LOGGER(name).info("Connected to your Mongo Database.")
 except:
-    LOGGER(__name__).error("» ꜰᴀɪʟᴇᴅ ᴛᴏ ᴄᴏɴɴᴇᴄᴛ ᴛᴏ ʏᴏᴜʀ ᴍᴏɴɢᴏ ᴅᴀᴛᴀʙᴀsᴇ.")
+    LOGGER(name).error("Failed to connect to your Mongo Database.")
     exit()
